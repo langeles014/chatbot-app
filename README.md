@@ -21,9 +21,11 @@ It then narrows the conversation by asking whether the user is on `Mac` or `Wind
 
 ## Tools Used
 
-- SvelteKit
-- TypeScript
-- Tailwind CSS
+- SvelteKit 2.50.2
+- Svelte 5.54.0
+- Tailwind CSS 4.2.2
+- TypeScript 5.9.3
+- Vite 7.3.1
 
 ## How To Run The Project
 
