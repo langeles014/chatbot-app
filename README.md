@@ -1,77 +1,146 @@
 # eGain Technical Troubleshooting Chatbot
 
-This project is a beginner-friendly chatbot prototype built for the eGain take-home assignment.
+This is a simple chatbot prototype built for the eGain take-home assignment.
+I chose to focus on guiding a customer through a simple technical troubleshooting process.
 
-I decided to go with the chatbot that focuses on one assignment scenario:
-`Guiding a customer through a simple technical troubleshooting process`
+The chatbot helps a user with three common problems:
 
-It helps users troubleshoot three common issues:
 - Wi-Fi not working
 - Device won't turn on
 - Battery drains fast
 
-## Setup / Installation Instructions
+It then narrows the conversation by asking whether the user is on `Mac` or `Windows`, and gives simple step-by-step troubleshooting help.
 
-### 1. Clone the repository
+## What This Project Includes
 
-```bash
-git clone https://github.com/langeles014/chatbot-app.git
-```
-### 2. Move into the project folder
-``` bash
-cd chatbot-app
-```
+- A working chatbot prototype built with SvelteKit
+- A decision-tree style conversation flow
+- Preset response buttons to make the chat easier to follow
+- Manual input as a backup option
+- Error handling for unexpected user input
 
-### 3. Install dependencies
-``` bash
-npm install
-```
-
-### 4. Start the development server
-``` bash
-npm run dev
-```
-### 5. Open the app
-After the server starts, open the local link shown in the terminal, 
-``` bash
-http://localhost:5173
-```
-## My Approach
-I designed this chatbot as a simple decision-tree troubleshooting flow.
-
-Instead of using a fully open-ended conversation, the chatbot guides the user step by step through a small set of 
-technical support options. The user first selects an issue, then selects whether they are using Mac or Windows, 
-and then answers short follow-up questions. 
-
-Based on those responses, the chatbot gives a focused troubleshooting recommendation.
-
-I also added basic error handling for unexpected input, including:
-
-- blank messages
-- unsupported issue types
-- unclear yes/no responses
-- manual responses longer than 50 words
-
-  
-## Tech Stack
+## Tools Used
 
 - SvelteKit
 - TypeScript
 - Tailwind CSS
 
-### Main Project Files
-src/routes/+page.svelte - **main chatbot interface**
+## How To Run The Project
 
-src/lib/chatbot/data.ts - **chatbot messages and preset choices**
+If you are new to this, follow these steps in order:
 
-src/lib/chatbot/engine.ts - **chatbot decision-tree logic**
+1. Clone the repository to your machine.
+2. Open the project folder on your terminal.
+3. Install dependencies.
+4. Start the development server.
+5. Open the local link shown in the terminal.
 
-src/lib/chatbot/types.ts - **shared chatbot types**
+Use these commands:
 
-src/lib/chatbot/validation.ts - **input validation helpers**
+```bash
+npm install
+npm run dev
+```
 
-### Notes
-This project was built to keep the user flow simple, clear, and easy to test.
+After that, your terminal should show a local address similar to:
 
+```bash
+http://localhost:5173
+```
 
+Open that link in your browser.
 
+## Useful Commands
+
+```bash
+npm run dev
+```
+
+Starts the local development server.
+
+```bash
+npm run check
+```
+
+Checks the project for Svelte and TypeScript errors.
+
+```bash
+npm run build
+```
+
+Builds the project for production.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+## How The Chatbot Works
+
+The chatbot uses a simple guided flow:
+
+1. The user chooses one of three issue types.
+2. The chatbot asks whether the user is on `Mac` or `Windows`.
+3. The chatbot asks short follow-up questions.
+4. The chatbot gives the user a next troubleshooting step.
+
+The goal is to keep the conversation smooth and easy to follow instead of making it too complex.
+
+## Error Handling
+
+This project includes simple error handling for unexpected input:
+
+- If the user types a blank message, the chatbot asks them to try again.
+- If the user types something outside the supported issue categories, the chatbot redirects them to the available options.
+- If the chatbot expects `yes` or `no` and gets something else, it asks the user to choose a clearer response.
+- If the user types more than 50 words, the chatbot asks for a shorter message.
+
+## Project Structure
+
+Here are the main files:
+
+- [README.md](/Users/luis_angeles/Desktop/chatbot-app/README.md): explains the project and how to run it
+- [assignment-notes.md](/Users/luis_angeles/Desktop/chatbot-app/assignment-notes.md): notes for the assignment, slides, and decision tree
+- [src/routes/+page.svelte](/Users/luis_angeles/Desktop/chatbot-app/src/routes/+page.svelte): main chatbot page and interface
+- [src/lib/chatbot/data.ts](/Users/luis_angeles/Desktop/chatbot-app/src/lib/chatbot/data.ts): chatbot messages and preset button choices
+- [src/lib/chatbot/engine.ts](/Users/luis_angeles/Desktop/chatbot-app/src/lib/chatbot/engine.ts): chatbot conversation logic
+- [src/lib/chatbot/types.ts](/Users/luis_angeles/Desktop/chatbot-app/src/lib/chatbot/types.ts): shared types
+- [src/lib/chatbot/validation.ts](/Users/luis_angeles/Desktop/chatbot-app/src/lib/chatbot/validation.ts): input validation helpers
+
+## Assignment Summary
+
+This project was designed around the eGain assignment requirement:
+
+`Guiding a customer through a simple technical troubleshooting process`
+
+It uses a clear decision-tree conversation rather than a complicated AI system, which keeps the prototype focused, understandable, and easy to present.
+
+## Screenshots
+
+### Home Screen
+
+![Home Screen](screenshots/homescreen.png)
+
+### Wi-Fi Troubleshooting Flow
+
+![Mac Wi-Fi Troubleshooting](screenshots/mac_wifi.png)
+
+### Battery Troubleshooting Flow
+
+![Windows Battery Troubleshooting](screenshots/win11_batt.png)
+
+### Error Handling Example 1
+
+![Error Handling](screenshots/invalid_blank.png)
+
+### Error Handling Example 2
+
+![Error Handling](screenshots/over50.png)
+
+## Notes For Reviewers
+
+- This project assumes an enterprise environment.
+- Windows users are guided as Windows 11 Enterprise users.
+- Mac users are guided using current macOS settings and tools.
+- The chatbot is intentionally simple so the flow is easy to understand and explain.

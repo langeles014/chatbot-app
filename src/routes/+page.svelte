@@ -96,10 +96,6 @@
     return "Choose your answer";
   }
 
-  function useStackedChoices() {
-    return currentStep === "issue-select";
-  }
-
   function resetChat() {
     messages = [...initialMessages];
     userInput = "";
