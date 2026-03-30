@@ -9,11 +9,7 @@
 -->
 
 <script lang="ts">
-  import {
-    getChoicesForStep,
-    initialMessages,
-    issueChoices,
-  } from "$lib/chatbot/data";
+  import { getChoicesForStep, initialMessages } from "$lib/chatbot/data";
   import { getNextChatState } from "$lib/chatbot/engine";
   import type { Choice, Message, Platform, Step } from "$lib/chatbot/types";
   import {
