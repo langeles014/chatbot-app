@@ -32,31 +32,29 @@ It then narrows the conversation by asking whether the user is on `Mac` or `Wind
 If you are new to this, follow these steps in order:
 
 1. Clone the repository to your machine.
+```bash
+git clone https://github.com/langeles014/chatbot-app.git
+```
 2. Open the project folder on your terminal.
+```bash
+cd chatbot-app
+```
 3. Install dependencies.
-4. Start the development server.
-5. Open the local link shown in the terminal.
-
-Use these commands:
-
 ```bash
 npm install
-npm run dev
-```
-
-After that, your terminal should show a local address similar to:
-
+``` 
+4. Start the development server.
 ```bash
-http://localhost:5173
+mpm run dev
+``` 
+5. Open the local link shown in the terminal.
+```bash
+ http://localhost:5173
 ```
 
 Open that link in your browser.
 
 ## Useful Commands
-
-```bash
-npm run dev
-```
 
 Starts the local development server.
 
