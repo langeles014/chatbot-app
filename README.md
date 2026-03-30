@@ -114,7 +114,7 @@ This project was designed around the eGain assignment requirement:
 
 `Guiding a customer through a simple technical troubleshooting process`
 
-It uses a clear decision-tree conversation rather than a complicated AI system, which keeps the prototype focused, understandable, and easy to present.
+It uses a simple yet clear decision-tree conversation for presentation purposes.
 
 ## Screenshots
 
